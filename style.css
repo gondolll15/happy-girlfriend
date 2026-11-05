@@ -1,0 +1,890 @@
+/* =====================================
+   DARK ROMANTIC ROSE THEME
+===================================== */
+
+:root {
+    --black: #080607;
+    --dark: #12090c;
+    --wine: #291016;
+    --maroon: #651b2a;
+    --red: #a52b3d;
+    --red-light: #c34b5c;
+    --cream: #f0e8df;
+    --muted: #b9a7a2;
+    --glass: rgba(20, 11, 14, 0.90);
+    --border: rgba(190, 75, 91, 0.28);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--cream);
+    background: var(--black);
+    overflow-x: hidden;
+}
+
+/* =====================================
+   BACKGROUND - BLACK RED ROSES
+===================================== */
+
+.special-page {
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 65px 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at 15% 15%,
+            rgba(130, 12, 35, 0.38),
+            transparent 40%
+        ),
+        radial-gradient(
+            ellipse at 85% 85%,
+            rgba(105, 12, 30, 0.35),
+            transparent 42%
+        ),
+        linear-gradient(
+            135deg,
+            #080607 0%,
+            #19090e 45%,
+            #310c17 75%,
+            #090607 100%
+        );
+}
+
+/* CAHAYA MERAH */
+
+.special-page::before,
+.special-page::after {
+    content: "";
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+    filter: blur(115px);
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+.special-page::before {
+    background: rgba(160, 20, 45, 0.28);
+    top: -150px;
+    left: -120px;
+}
+
+.special-page::after {
+    background: rgba(110, 10, 30, 0.30);
+    bottom: -150px;
+    right: -120px;
+}
+
+/* MOTIF BUNGA MAWAR */
+
+.rose-decoration {
+    position: absolute;
+    z-index: 0;
+
+    color: rgba(175, 35, 57, 0.15);
+
+    font-family: Georgia, serif;
+    line-height: 1;
+
+    pointer-events: none;
+    user-select: none;
+
+    text-shadow:
+        0 0 25px rgba(150, 20, 40, 0.15);
+}
+
+.rose-one {
+    top: 5%;
+    left: 4%;
+    font-size: clamp(80px, 13vw, 170px);
+    transform: rotate(-20deg);
+}
+
+.rose-two {
+    bottom: 5%;
+    right: 4%;
+    font-size: clamp(90px, 15vw, 190px);
+    transform: rotate(20deg);
+}
+
+.rose-three {
+    top: 43%;
+    right: 5%;
+    font-size: 65px;
+    transform: rotate(15deg);
+}
+
+.rose-four {
+    bottom: 35%;
+    left: 5%;
+    font-size: 55px;
+    transform: rotate(-15deg);
+}
+
+/* =====================================
+   MAIN CARD
+===================================== */
+
+.special-card {
+    width: 100%;
+    max-width: 760px;
+
+    padding: 50px 55px;
+
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    background: var(--glass);
+
+    border: 1px solid var(--border);
+    border-radius: 22px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.55),
+        0 0 45px rgba(120, 20, 42, 0.15);
+
+    animation: fadeIn 0.9s ease both;
+}
+
+/* =====================================
+   TYPOGRAPHY
+===================================== */
+
+.top-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+
+    color: #c47a83;
+    font-weight: 600;
+
+    margin-bottom: 22px;
+}
+
+h1,
+h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    font-size: clamp(40px, 7vw, 62px);
+    line-height: 1.15;
+
+    font-weight: 500;
+    color: var(--cream);
+}
+
+h1 span {
+    font-style: italic;
+    color: #bd5262;
+}
+
+.divider {
+    width: 150px;
+    margin: 25px auto;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #bd5262;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+
+    height: 1px;
+    flex: 1;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #8d3545
+    );
+}
+
+/* =====================================
+   WELCOME PAGE
+===================================== */
+
+.welcome-card {
+    max-width: 650px;
+}
+
+.welcome-icon {
+    font-size: 55px;
+    color: #bd5262;
+    margin: 20px 0;
+}
+
+.welcome-photo {
+    width: 190px;
+
+    margin: 28px auto;
+    padding: 9px 9px 5px;
+
+    position: relative;
+
+    background: #eee8df;
+
+    transform: rotate(-3deg);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.5);
+
+    transition: transform 0.3s ease;
+}
+
+.welcome-photo:hover {
+    transform: rotate(0deg) scale(1.04);
+}
+
+.welcome-photo img {
+    display: block;
+
+    width: 100%;
+    height: 190px;
+
+    object-fit: cover;
+}
+
+.welcome-description {
+    max-width: 430px;
+
+    margin: 22px auto;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    line-height: 1.8;
+
+    color: #c9b9b4;
+}
+
+.open-button {
+    display: inline-block;
+
+    margin-top: 15px;
+    padding: 14px 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #8e2639,
+        #581522
+    );
+
+    color: white;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 8px 25px rgba(130, 25, 47, 0.35);
+
+    transition: 0.3s ease;
+}
+
+.open-button:hover {
+    transform: translateY(-4px);
+
+    background: linear-gradient(
+        135deg,
+        #b4384c,
+        #762033
+    );
+
+    box-shadow:
+        0 12px 30px rgba(160, 35, 60, 0.4);
+}
+
+.open-button:active {
+    transform: scale(0.97);
+}
+
+/* =====================================
+   GALLERY
+===================================== */
+
+.gallery-title {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 27px;
+    font-weight: 500;
+
+    color: var(--cream);
+
+    margin-top: 30px;
+}
+
+.gallery-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 18px;
+    font-style: italic;
+
+    color: #b99a99;
+
+    margin-top: 7px;
+    margin-bottom: 25px;
+}
+
+.polaroid-gallery {
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 25px;
+
+    margin: 65px auto 55px;
+    padding-top: 15px;
+}
+
+/* =====================================
+   POLAROID
+===================================== */
+
+.polaroid-gallery .polaroid {
+    width: 30%;
+    max-width: 190px;
+    min-width: 0;
+
+    margin: 0;
+    padding: 10px 10px 5px;
+
+    position: relative;
+
+    background: #eee8df;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.5),
+        0 0 15px rgba(120, 25, 42, 0.12);
+
+    transition: transform 0.35s ease;
+}
+
+/* TALI FOTO */
+
+.polaroid-gallery .polaroid::before {
+    content: "";
+
+    position: absolute;
+
+    width: 2px;
+    height: 57px;
+
+    left: 50%;
+    top: -57px;
+
+    transform: translateX(-50%);
+
+    background: linear-gradient(
+        to bottom,
+        #9b7c70,
+        #d0b9a5
+    );
+
+    box-shadow:
+        0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+/* PENJEPIT FOTO */
+
+.polaroid-gallery .polaroid::after {
+    content: "";
+
+    position: absolute;
+
+    width: 15px;
+    height: 10px;
+
+    left: 50%;
+    top: -5px;
+
+    transform: translateX(-50%);
+
+    background: #a68c7b;
+
+    border: 1px solid #d3b9a5;
+    border-radius: 3px;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.polaroid-gallery .polaroid img {
+    display: block;
+
+    width: 100%;
+    height: 175px;
+
+    object-fit: cover;
+}
+
+.polaroid-gallery .polaroid p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 15px;
+    font-style: italic;
+
+    text-align: center;
+
+    padding: 12px 0 8px;
+
+    color: #59413d;
+}
+
+.polaroid-one {
+    transform: rotate(-7deg);
+}
+
+.polaroid-two {
+    transform: rotate(3deg);
+}
+
+.polaroid-three {
+    transform: rotate(-4deg);
+}
+
+.polaroid-gallery .polaroid:hover {
+    transform: rotate(0deg) translateY(-8px) scale(1.04);
+}
+
+/* =====================================
+   MESSAGE
+===================================== */
+
+.message {
+    max-width: 490px;
+
+    margin: 40px auto;
+
+    text-align: left;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 21px;
+    line-height: 1.8;
+
+    color: #d1c0ba;
+}
+
+.message p {
+    margin-bottom: 17px;
+}
+
+.message .greeting {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 25px;
+    color: #c56b78;
+
+    font-weight: 600;
+}
+
+.message .closing {
+    text-align: right;
+
+    color: #bd6875;
+    font-style: italic;
+
+    margin-top: 25px;
+}
+
+/* =====================================
+   MUSIC PLAYER
+===================================== */
+
+.spotify-player {
+    max-width: 420px;
+
+    margin: 35px auto 25px;
+    padding: 22px;
+
+    border: 1px solid rgba(190, 75, 91, 0.25);
+    border-radius: 18px;
+
+    background: linear-gradient(
+        145deg,
+        #25171b,
+        #130e10
+    );
+
+    color: white;
+    text-align: left;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(130, 25, 47, 0.12);
+}
+
+.spotify-top {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    color: #c6aaa7;
+
+    margin-bottom: 18px;
+}
+
+.spotify-heart {
+    color: #b84457;
+    font-size: 18px;
+}
+
+.spotify-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.album-cover {
+    width: 75px;
+    height: 75px;
+
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.spotify-details h3 {
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 14px;
+    color: white;
+}
+
+.spotify-details p {
+    margin-top: 5px;
+
+    font-size: 12px;
+    color: #c3b9b4;
+}
+
+.spotify-details span {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #c56b78;
+    font-size: 10px;
+}
+
+/* PROGRESS BAR */
+
+.spotify-progress {
+    margin-top: 22px;
+}
+
+.spotify-progress input {
+    width: 100%;
+
+    accent-color: #a52b3d;
+    cursor: pointer;
+}
+
+.time-label {
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #bcb0aa;
+    font-size: 10px;
+
+    margin-top: 3px;
+}
+
+/* PLAY BUTTON */
+
+.spotify-controls {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 13px;
+}
+
+#musicButton {
+    width: 46px;
+    height: 46px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #a52b3d;
+    color: white;
+
+    font-size: 19px;
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+#musicButton:hover {
+    transform: scale(1.1);
+    background: #c34254;
+}
+
+#musicButton:active {
+    transform: scale(0.95);
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.bottom-text {
+    font-size: 9px;
+    letter-spacing: 3px;
+
+    color: #9f7779;
+
+    margin-top: 30px;
+}
+
+.back-link {
+    display: inline-block;
+
+    margin-top: 22px;
+
+    font-size: 12px;
+    color: #bd6875;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: #ed9ba4;
+}
+
+/* =====================================
+   OLD DECORATIONS
+===================================== */
+
+.decoration {
+    position: absolute;
+
+    color: rgba(177, 58, 77, 0.22);
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+.decoration-one {
+    top: 9%;
+    left: 9%;
+    font-size: 65px;
+}
+
+.decoration-two {
+    bottom: 12%;
+    right: 10%;
+    font-size: 75px;
+}
+
+.decoration-three {
+    top: 20%;
+    right: 13%;
+    font-size: 45px;
+}
+
+/* =====================================
+   ANIMATION
+===================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .special-page {
+        padding: 35px 13px;
+        background-attachment: scroll;
+    }
+
+    .special-card {
+        padding: 36px 20px;
+        border-radius: 18px;
+    }
+
+    .welcome-description {
+        font-size: 19px;
+    }
+
+    .gallery-title {
+        font-size: 23px;
+    }
+
+    .polaroid-gallery {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 65px;
+
+        margin-top: 65px;
+        margin-bottom: 45px;
+    }
+
+    .polaroid-gallery .polaroid {
+        width: 75%;
+        max-width: 230px;
+    }
+
+    .polaroid-gallery .polaroid img {
+        height: 220px;
+    }
+
+    .polaroid-gallery .polaroid::before {
+        height: 52px;
+        top: -52px;
+    }
+
+    .message {
+        font-size: 19px;
+        line-height: 1.75;
+    }
+
+    .message .greeting {
+        font-size: 22px;
+    }
+
+    .spotify-player {
+        padding: 17px;
+    }
+
+    .decoration-one {
+        font-size: 40px;
+    }
+
+    .decoration-two {
+        font-size: 45px;
+    }
+
+    .bottom-text {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .rose-one {
+        top: 2%;
+        left: -15px;
+        font-size: 85px;
+    }
+
+    .rose-two {
+        bottom: 2%;
+        right: -15px;
+        font-size: 100px;
+    }
+
+    .rose-three {
+        right: 0;
+        font-size: 40px;
+    }
+
+    .rose-four {
+        left: 0;
+        font-size: 35px;
+    }
+}
+
+/* =====================================
+   SMALL PHONES
+===================================== */
+
+@media (max-width: 360px) {
+
+    .special-card {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .polaroid-gallery .polaroid {
+        width: 82%;
+    }
+
+    .spotify-content {
+        gap: 10px;
+    }
+
+    .album-cover {
+        width: 62px;
+        height: 62px;
+    }
+
+    .spotify-details h3 {
+        font-size: 12px;
+    }
+}
+
+/* =====================================
+   LAPTOP
+===================================== */
+
+@media (min-width: 1000px) {
+
+    .special-card {
+        padding: 55px 65px;
+    }
+
+    .polaroid-gallery {
+        gap: 30px;
+    }
+
+}

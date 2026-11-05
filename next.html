@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100b0d">
+
+    <title>A Special Message For You</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<main class="special-page">
+
+    <div class="decoration decoration-one">✿</div>
+    <div class="decoration decoration-two">♡</div>
+    <div class="decoration decoration-three">✧</div>
+    <div class="rose-decoration rose-one">❀</div>
+    <div class="rose-decoration rose-two">❀</div>
+    <div class="rose-decoration rose-three">✿</div>
+    <div class="rose-decoration rose-four">✿</div>
+
+    <section class="special-card">
+
+        <div class="top-label">A LITTLE LETTER FOR YOU</div>
+
+        <h1>
+            To Someone <br>
+            <span>Special.</span>
+        </h1>
+
+        <div class="divider"><span>♡</span></div>
+
+        <!-- GALERI 3 FOTO POLAROID -->
+
+        <h2 class="gallery-title">Our Little Memories</h2>
+
+        <p class="gallery-subtitle">
+            A few moments worth remembering ♡
+        </p>
+
+        <div class="polaroid-gallery">
+
+            <div class="polaroid polaroid-one">
+                <img src="s.jpeg" alt="Kenangan pertama">
+                <p>sweet memories ♡</p>
+            </div>
+
+            <div class="polaroid polaroid-two">
+                <img src="a.jpeg" alt="Kenangan kedua">
+                <p>little moments</p>
+            </div>
+
+            <div class="polaroid polaroid-three">
+                <img src="t.jpeg" alt="Kenangan ketiga">
+                <p>forever remembered ♡</p>
+            </div>
+
+        </div>
+
+        <!-- PESAN -->
+
+        <div class="message">
+
+            <p class="greeting">Happy GirlFriend</p>
+
+            <p>
+                Semoga hidupmu selalu punya warna, bahkan setelah melewati hari-hari yang kelabu. nggak harus selalu bahagia, karena sedih, kecewa, kehilangan, dan gagal juga bagian dari perjalanan
+            </p>
+
+            <p>
+                Semoga pada akhirnya, hidupmu menjadi lukisan yang penuh warna, bukan karena semuanya selalu indah, tetapi karena kamu memilih untuk tetap memberi warna pada setiap bagian ceritanya.
+            </p>
+
+            <p>
+                semoga pundak kecilmu selalu dikuatkan oleh Tuhan, dalam setiap lelah yang tak pernah kamu ceritakan, dalam setiap air mata yang jatuh diam-diam tanpa saksi, dan dalam setiap doa yang hanya berani kamu bisikkan dalam hati. mungkin dunia tidak selalu mengerti. seberapa berat yang kamu jalani, tapi Tuhan tau, Tuhan melihat, dan Tuhan tidak pernah abai pada setiap perjuanganmu yang paling sunyi. tetap bertahan, karena sejauh ini kamu sudah luar biasa kuat, meski sering kali kamu merasa rapuh. Semangattt teruss yaaaa
+            </p>
+
+            <p class="closing">I'm here for U, always. ♡</p>
+
+        </div>
+
+        <!-- MUSIC PLAYER -->
+
+        <div class="spotify-player">
+
+            <div class="spotify-top">
+                <span>♫ NOW PLAYING</span>
+                <span class="spotify-heart">♥</span>
+            </div>
+
+            <div class="spotify-content">
+
+                <img src="id.jpeg" alt="Album Cover" class="album-cover">
+
+                <div class="spotify-details">
+                    <h3>I'd like to watch you sleeping</h3>
+                    <p>Sal Priadi</p>
+                    <span>♡ Made for you</span>
+                </div>
+
+            </div>
+
+            <div class="spotify-progress">
+
+                <input
+                    type="range"
+                    id="progress"
+                    value="0"
+                    min="0"
+                    max="100"
+                    step="0.1"
+                    aria-label="Posisi lagu"
+                >
+
+                <div class="time-label">
+                    <span id="currentTime">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+
+            </div>
+
+            <div class="spotify-controls">
+                <button id="musicButton" aria-label="Putar musik">
+                    ▶
+                </button>
+            </div>
+
+            <audio id="backgroundMusic" preload="metadata" loop>
+                <source src="i'd like.mp3" type="audio/mpeg">
+            </audio>
+
+        </div>
+
+        <div class="bottom-text">
+            MADE WITH LOVE · JUST FOR YOU
+        </div>
+
+        <a href="index.html" class="back-link">
+            Back to the beginning
+        </a>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
